@@ -1,0 +1,62 @@
+ [
+   {
+      "title" : "Somewhere Now", 
+      "url" : "./music/revolutionary_radio/01_Somewhere_Now.mp3", 
+      "cover" : "images/revolution.jpg"
+    },
+    {
+       "title": "Bang Bang",
+       "url": "./music/revolutionary_radio/02_Bang_Bang.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Revolution Radio",
+       "url": "./music/revolutionary_radio/03_Revolution_Radio.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Say Goodbye",
+       "url": "./music/revolutionary_radio/04_Say_Goodbye.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Outlaws",
+       "url": "./music/revolutionary_radio/05_Outlaws.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Bouncing Off The Wall",
+       "url": "./music/revolutionary_radio/06_Bouncing_Off_The_Wall.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Still Breathing",
+       "url": "./music/revolutionary_radio/07_Still_Breathing.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Youngblood",
+       "url": "./music/revolutionary_radio/08_Youngblood.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Too Dumb To Die",
+       "url": "./music/revolutionary_radio/09_Too_Dumb_To_Die.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Troubled Time",
+       "url": "./music/revolutionary_radio/10_Troubled_Time.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Forever Now",
+       "url": "./music/revolutionary_radio/11_Forever_Now.mp3",
+       "cover": "images/revolution.jpg"
+     },
+     {
+       "title": "Forever Now",
+       "url": "./music/revolutionary_radio/11_Forever_Now.mp3",
+       "cover": "images/revolution.jpg"
+     }
+  ]
