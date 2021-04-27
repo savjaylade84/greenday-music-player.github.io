@@ -1,3 +1,4 @@
+
 // get the important element
 const music_container = document.querySelector('.music-container');
 const play_btn = document.querySelector('#play');
@@ -9,37 +10,49 @@ const progress_container = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
-//store song list
 let song_list;
+let song_index;
+
+  //update song
+ function load_song(song) {
+
+  title.innerHTML = `${String(song.title).toString()}`;
+  audio.src = `${String(song.url).toString()}`;
+  cover.href = `${String(song.cover).toString()}`;
+      console.log(song);
+
+  };
 
 //get and load song list from json file
-window.addEventListener('load',()=>{
-   
-   song_list =
-    fetch("./songs.json").
-    then(res =>res.json()).
-    then(data =>JSON.parse(data)).
-    catch(Error => console.log(Error));
-   
-   //load the first song
-   load_song(song_list[0]);
-  //show if the task successfully 
-   console.log(song_list);
-});
+function loadJson(){
+  
+  fetch("songs.json").
+  then(res =>{
+  
+    if(res.ok)
+     JSON.parse(res.json());
+    
+  }).then(data => {
+    
+    console.log(data);
+    
+    //set and store song json file
+    song_list = data;
+    
+    //track songs list count
+    song_index = song_list.length;
+    
+    //load the song
+    load_song(song_list[song_index]);
+    console.log("song is loaded");
 
-//track songs list count
-let song_index = Array.of(song_list).length;
+  }).catch(error => {
+    console.log("json parsing failed");
+  });
+  
+} 
 
-//load the song
-load_song(song_list[song_index]);
-
-//update song
-function load_song(song){
- title.innerHTML = `${String(song.title).toString()}`;
- audio.src = `${String(song.url).toString()}`;
- cover.href = `${String(song.cover).toString()}`;
- console.log(song);
-};
+window.addEventListener('load',loadJson);
 
 // play the song
 function play_song(){
@@ -94,13 +107,10 @@ function set_progress(e){
     const clickX = e.offsetX;
     const duration = audio.duration;
   
-    audio.currentTime = (cclickX / width) * duration;
+    audio.currentTime = (clickX / width) * duration;
 } 
 
-
-
 //Event listener
-
 // play the current song
 play_btn.addEventListener('click',()=>{
   
